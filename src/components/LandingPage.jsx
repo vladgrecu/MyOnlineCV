@@ -1,35 +1,37 @@
 import React from "react";
-import Particles from "react-particles-js";
-import LazyHero from "react-lazy-hero";
+import { MDBBtn } from "mdbreact";
+import TypeWriter from "../components/LandingPage/TypeWriter";
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 150,
-      density: {
-        enable: true,
-        value_area: 600
-      }
-    },
-    move: {
-      random: true,
-      bounce: false
-    }
-  }
-};
+import LazyHero from "react-lazy-hero";
 
 export default function LandingPage() {
   return (
-    <div className="text-center">
+    <div
+      className="text-center"
+      style={{ backgroundColor: "#4285f4" }}
+      id="welcome"
+    >
       <LazyHero
-        imageSrc="https://unsplash.it/2000/1000"
         minHeight="100vh"
         parallaxOffset={100}
-        color="#fff"
-        opacity={0.2}
+        opacity={0.1}
+        style={{ position: "relative" }}
       >
-        <Particles className="particles" params={particlesOptions}></Particles>
-        <h1>Vlad Grecu</h1>
+        <h1 style={{ color: "#fff", fontSize: "5rem", fontWeight: "700" }}>
+          Hello! I'm Vlad Grecu.
+        </h1>
+        <TypeWriter
+          dataText={[
+            "Welcome to MyOnlineCV!",
+            "Nice of you to drop by!",
+            "Click the button bellow to browse around!"
+          ]}
+        />
+        <a href="#myNavigation">
+          <MDBBtn color="info" style={{ zIndex: "1" }}>
+            View My Website
+          </MDBBtn>
+        </a>
       </LazyHero>
     </div>
   );

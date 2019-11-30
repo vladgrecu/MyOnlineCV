@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  MDBCol,
-  MDBContainer,
-  MDBRow,
-  MDBFooter,
-  // MDBNavLink,
-  MDBIcon
-} from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const Footer = () => {
   return (
@@ -26,7 +19,7 @@ const Footer = () => {
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{"Vlad Grecu "}
+          &copy; {new Date().getFullYear()} Copyright: {"Vlad Grecu "}
         </MDBContainer>
       </div>
     </MDBFooter>

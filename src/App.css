@@ -1,28 +1,9 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+html {
+  scroll-behavior: smooth;
 }
 
 .particles {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -31,11 +12,35 @@
 }
 
 .Test {
-  display: flex;
+  display: flexbox;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   font-size: 40px;
-  height: 700px;
+  height: 80vh;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+.item * {
+  margin: 10px;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none;
+}
+.enlarge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 2;
+  border-radius: 5px;
+}
+.enlarge:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+  top: 10%;
+  z-index: 3 !important;
 }

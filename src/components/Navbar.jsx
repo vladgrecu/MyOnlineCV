@@ -6,35 +6,36 @@ import {
   MDBNavItem,
   MDBNavLink,
   MDBNavbarToggler,
-  MDBCollapse,
-  MDBIcon
+  MDBCollapse
 } from "mdbreact";
 
-const disableAll = state => {
-  Object.keys(state).forEach(key => {
-    state[key] = false;
-  });
-  return state;
-};
-
 class Navbar extends Component {
-  state = {
-    isOpen: false,
-    isActive: {
-      home: true,
-      resume: false,
-      about: false,
-      projects: false,
-      contact: false
-    }
-  };
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+      isActive: {
+        about: true,
+        resume: false,
+        projects: false,
+        contact: false
+      }
+    };
+  }
 
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
 
+  disableAll = state => {
+    Object.keys(state).forEach(key => {
+      state[key] = false;
+    });
+    return state;
+  };
+
   setActive = param => {
-    disableAll(this.state.isActive);
+    this.disableAll(this.state.isActive);
     this.setState(prevState => ({
       isActive: {
         ...prevState.isActive,
@@ -44,28 +45,28 @@ class Navbar extends Component {
   };
 
   render() {
-    console.log(this.state.isActive);
     return (
-      <MDBNavbar color="blue lighten-2" dark expand="md" id="myNavigation">
+      <MDBNavbar
+        color="blue lighten-2"
+        dark
+        expand="md"
+        id="myNavigation"
+        style={{ zIndex: 100, position: "sticky", top: "0" }}
+      >
         <MDBNavbarBrand>
           <strong className="white-text">MyOnlineCV</strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
-            <MDBNavItem active={this.state.isActive.home}>
-              <MDBNavLink to="/home" onClick={() => this.setActive("home")}>
-                Home
+            <MDBNavItem active={this.state.isActive.about}>
+              <MDBNavLink to="/" onClick={() => this.setActive("about")}>
+                <i className="fas fa-user-ninja"></i>About
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem active={this.state.isActive.resume}>
               <MDBNavLink to="/resume" onClick={() => this.setActive("resume")}>
-                Resume
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem active={this.state.isActive.about}>
-              <MDBNavLink to="/about" onClick={() => this.setActive("about")}>
-                About Me
+                <i className="fas fa-info-circle"></i>Resume
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem active={this.state.isActive.projects}>
@@ -73,7 +74,7 @@ class Navbar extends Component {
                 to="/projects"
                 onClick={() => this.setActive("projects")}
               >
-                Projects
+                <i className="fas fa-code"></i>Projects
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem active={this.state.isActive.contact}>
@@ -81,26 +82,7 @@ class Navbar extends Component {
                 to="/contact"
                 onClick={() => this.setActive("contact")}
               >
-                Contact
-              </MDBNavLink>
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink
-                className="waves-effect waves-light"
-                to="https://www.facebook.com/grecu.vlad.50"
-                target="_blank"
-              >
-                <MDBIcon fab icon="facebook" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink
-                className="waves-effect waves-light"
-                to="target=_blank(https://www.facebook.com/grecu.vlad.50)"
-              >
-                <MDBIcon fab icon="github" />
+                <i className="fas fa-envelope"></i>Contact
               </MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
