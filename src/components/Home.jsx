@@ -8,7 +8,7 @@ import Gallery from "./Home/Gallery";
 export default function Home() {
   return (
     <div className="card w-75 mx-auto mt-5">
-      <h1 className="text-center mt-5 border-bottom w-25 mx-auto p-2">
+      <h1 className="text-center mt-5 mb-5 mx-auto border-bottom w-50  p-3">
         About me
       </h1>
       <div className="home-items-container">

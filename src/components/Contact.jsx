@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MDBRow,
   MDBCol,
@@ -8,14 +8,48 @@ import {
   MDBBtn,
   MDBInput
 } from "mdbreact";
+import NotificationModal from "../components/Contact/NotificationModal";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [serverResponse, setServerResponse] = useState("");
+  const [visibility, setVisibility] = useState(false);
+  console.log(visibility);
+  let form = { name, email, subject, message };
+
+  const submitForm = async event => {
+    event.preventDefault();
+    try {
+      const request = await fetch("https://formspree.io/mnqndzok", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(form)
+      });
+      await request.json();
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setServerResponse(
+        "Your email is on it's way! I will get in touch as soon as possible."
+      );
+      setVisibility(true);
+    } catch (error) {
+      setServerResponse("Something went wrong! Please try again.");
+      setVisibility(true);
+    }
+  };
   return (
     <section className="my-5 card w-75 mx-auto">
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Get in Touch
       </h2>
-      <p className="text-center w-responsive mx-auto pb-5">
+      <p className="text-center w-responsive mx-auto p-2 pb-5">
         Whether you want to get in touch, talk about a project collaboration, or
         just say hi, I'd love to hear from you. Simply fill the from and send me
         an email.
@@ -24,50 +58,66 @@ const Contact = () => {
         <MDBCol lg="12" className="lg-0 mb-4 mx-auto">
           <MDBCard>
             <MDBCardBody className="mx-auto w-responsive">
-              <div className="form-header">
-                <h3 className="mt-2 text-center">
-                  <MDBIcon icon="envelope" /> Send A Message
-                </h3>
-              </div>
-              <div className="md-form">
-                <MDBInput
-                  icon="user"
-                  label="Your name"
-                  iconClass="grey-text"
-                  type="text"
-                  id="form-name"
-                />
-              </div>
-              <div className="md-form">
-                <MDBInput
-                  icon="envelope"
-                  label="Your email"
-                  iconClass="grey-text"
-                  type="text"
-                  id="form-email"
-                />
-              </div>
-              <div className="md-form">
-                <MDBInput
-                  icon="tag"
-                  label="Subject"
-                  iconClass="grey-text"
-                  type="text"
-                  id="form-subject"
-                />
-              </div>
-              <div className="md-form">
-                <MDBInput
-                  icon="pencil-alt"
-                  label="Message..."
-                  iconClass="grey-text"
-                  type="textarea"
-                  id="form-text"
-                />
-              </div>
-              <div className="text-center">
-                <MDBBtn color="light-blue">Submit</MDBBtn>
-              </div>
+              <form onSubmit={submitForm}>
+                <div className="form-header">
+                  <h3 className="mt-2 text-center">
+                    <MDBIcon icon="envelope" /> Send A Message
+                  </h3>
+                </div>
+                <div className="md-form">
+                  <MDBInput
+                    required
+                    icon="user"
+                    label="Your name"
+                    iconClass="grey-text"
+                    type="text"
+                    id="form-name"
+                    value={name}
+                    onChange={event => setName(event.target.value)}
+                  />
+                </div>
+                <div className="md-form">
+                  <MDBInput
+                    required
+                    icon="envelope"
+                    label="Your email"
+                    iconClass="grey-text"
+                    type="email"
+                    id="form-email"
+                    value={email}
+                    onChange={event => setEmail(event.target.value)}
+                  />
+                </div>
+                <div className="md-form">
+                  <MDBInput
+                    required
+                    icon="tag"
+                    label="Subject"
+                    iconClass="grey-text"
+                    type="text"
+                    id="form-subject"
+                    value={subject}
+                    onChange={event => setSubject(event.target.value)}
+                  />
+                </div>
+                <div className="md-form">
+                  <MDBInput
+                    required
+                    icon="pencil-alt"
+                    label="Message..."
+                    iconClass="grey-text"
+                    type="textarea"
+                    id="form-text"
+                    value={message}
+                    onChange={event => setMessage(event.target.value)}
+                  />
+                </div>
+                <div className="text-center">
+                  <MDBBtn color="light-blue" type="submit">
+                    Submit
+                  </MDBBtn>
+                </div>
+              </form>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
@@ -109,6 +159,13 @@ const Contact = () => {
           </MDBRow>
         </MDBCol>
       </MDBCol>
+      {visibility ? (
+        <NotificationModal
+          isVisible={visibility}
+          setVisibility={setVisibility}
+          serverResponse={serverResponse}
+        />
+      ) : null}
     </section>
   );
 };

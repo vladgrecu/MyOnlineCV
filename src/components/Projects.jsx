@@ -31,13 +31,14 @@ class Projects extends Component {
         <h1 className="text-center mt-5">
           <i className="fas fa-code"></i> My Portofolio
         </h1>
-        <MDBContainer className="card mt-5">
+        <MDBContainer className="card mt-5" style={{ maxWidth: "1400px" }}>
           <MDBNav
             className="nav-tabs nav-justified mt-5 p-1"
             style={{
               zIndex: 100,
               position: "sticky",
-              top: "4px"
+              top: "54px",
+              borderBottom: "0px"
             }}
           >
             <MDBNavItem className="">

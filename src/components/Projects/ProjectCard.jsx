@@ -10,8 +10,8 @@ export default function ProjectCard({ options, index }) {
   };
 
   return (
-    <Zoom duration={500 * (index + 1)}>
-      <div className="card w-50 m-5 mx-auto">
+    <Zoom duration={700 * (index + 1)}>
+      <div className="card m-5 mx-auto" style={{ maxWidth: "41%" }}>
         <div
           className="view overlay hoverable enlarge"
           onClick={() => openNewWindow(live)}
