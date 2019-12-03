@@ -75,7 +75,7 @@ export default function Home() {
           <Bounce duration={1500} right>
             <div
               className="hoverable home-text"
-              style={{ backgroundColor: "#ffbb02" }}
+              style={{ backgroundColor: "#ffbb01" }}
             >
               <h1 className="text-center">Competitive Gamer</h1>
               <p>

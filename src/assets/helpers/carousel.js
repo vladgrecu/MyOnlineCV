@@ -24,20 +24,20 @@ export const carrouselItem = [
     text:
       "Second place! I would like to thank the team for the effort! Next time...First Place is ours!"
   },
-  { id: "4", src: picture4, text: "My friends from TheBox - Barbell Club" },
+  { id: "4", src: picture4, text: "My friends from TheBox - Barbell Club." },
   {
     id: "5",
     src: picture5,
-    text: "The calm before the storm. My first ever Spartan Race!"
+    text: "Just another sports competition at my favourite gym in town."
   },
   {
     id: "6",
     src: picture6,
-    text: "The calm before the storm. My first ever Spartan Race!"
+    text: "After a really awesome course, getting my Certified Trainer deegree."
   },
   {
     id: "7",
     src: picture7,
-    text: "The calm before the storm. My first ever Spartan Race!"
+    text: "Lots and lots of time spent on this toon, nice memories!"
   }
 ];

@@ -22,7 +22,7 @@ export default function NotificationModal({
         centered
       >
         <MDBModalHeader toggle={() => setVisibility(false)}>
-          Submit Status
+          <i className="fas fa-exclamation-circle"></i> Submit Status
         </MDBModalHeader>
         <MDBModalBody>{serverResponse}</MDBModalBody>
         <MDBModalFooter>

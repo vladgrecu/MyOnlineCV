@@ -35,8 +35,11 @@ const Accordion = ({ options }) => {
         style={{ maxHeight: `${setHeight}` }}
         className="section__content"
       >
-        <div className="section__text">{body}</div>
-        <div className="section__text">hello</div>
+        {body.map((item, i) => (
+          <div className="section__text" key={i}>
+            <i className="far fa-dot-circle"></i> {item}
+          </div>
+        ))}
       </div>
     </div>
   );

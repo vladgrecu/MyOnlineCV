@@ -17,7 +17,6 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [serverResponse, setServerResponse] = useState("");
   const [visibility, setVisibility] = useState(false);
-  console.log(visibility);
   let form = { name, email, subject, message };
 
   const submitForm = async event => {
@@ -46,9 +45,9 @@ const Contact = () => {
   };
   return (
     <section className="my-5 card w-75 mx-auto">
-      <h2 className="h1-responsive font-weight-bold text-center my-5">
+      <h1 className="text-center mt-5 mb-5 mx-auto border-bottom w-50 p-3">
         Get in Touch
-      </h2>
+      </h1>
       <p className="text-center w-responsive mx-auto p-2 pb-5">
         Whether you want to get in touch, talk about a project collaboration, or
         just say hi, I'd love to hear from you. Simply fill the form and send me

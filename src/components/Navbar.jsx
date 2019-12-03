@@ -24,7 +24,9 @@ class Navbar extends Component {
   }
 
   toggleCollapse = () => {
-    this.setState({ isOpen: !this.state.isOpen });
+    if (window.innerWidth < 769) {
+      this.setState({ isOpen: !this.state.isOpen });
+    }
   };
 
   disableAll = state => {
@@ -45,6 +47,12 @@ class Navbar extends Component {
   };
 
   render() {
+    const links = [
+      { route: "/", name: "about", linkIcon: "fas fa-user-ninja" },
+      { route: "/resume", name: "resume", linkIcon: "fas fa-info-circle" },
+      { route: "/projects", name: "projects", linkIcon: "fas fa-code" },
+      { route: "/contact", name: "contact", linkIcon: "fas fa-envelope" }
+    ];
     return (
       <MDBNavbar
         color="blue lighten-2"
@@ -59,32 +67,20 @@ class Navbar extends Component {
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right>
-            <MDBNavItem active={this.state.isActive.about}>
-              <MDBNavLink to="/" onClick={() => this.setActive("about")}>
-                <i className="fas fa-user-ninja"></i>About
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem active={this.state.isActive.resume}>
-              <MDBNavLink to="/resume" onClick={() => this.setActive("resume")}>
-                <i className="fas fa-info-circle"></i>Resume
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem active={this.state.isActive.projects}>
-              <MDBNavLink
-                to="/projects"
-                onClick={() => this.setActive("projects")}
-              >
-                <i className="fas fa-code"></i>Projects
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem active={this.state.isActive.contact}>
-              <MDBNavLink
-                to="/contact"
-                onClick={() => this.setActive("contact")}
-              >
-                <i className="fas fa-envelope"></i>Contact
-              </MDBNavLink>
-            </MDBNavItem>
+            {links.map((link, i) => (
+              <MDBNavItem active={this.state.isActive[link.name]} key={i}>
+                <MDBNavLink
+                  to={link.route}
+                  onClick={() => {
+                    this.toggleCollapse();
+                    this.setActive(link.name);
+                  }}
+                >
+                  <i className={link.linkIcon}></i>
+                  {" " + link.name.charAt(0).toUpperCase() + link.name.slice(1)}
+                </MDBNavLink>
+              </MDBNavItem>
+            ))}
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>

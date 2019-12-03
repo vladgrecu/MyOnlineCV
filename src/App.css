@@ -44,6 +44,8 @@ html {
   top: 10%;
   z-index: 5 !important;
 }
-.carousel-control-prev-icon {
-  height: 50px;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px !important;
+  height: 50px !important;
 }

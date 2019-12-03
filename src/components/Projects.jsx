@@ -28,8 +28,8 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-center mt-5">
-          <i className="fas fa-code"></i> My Portofolio
+        <h1 className="text-center mt-5 mb-5 mx-auto border-bottom w-50 p-3">
+          My Portofolio
         </h1>
         <MDBContainer className="card mt-5" style={{ maxWidth: "1400px" }}>
           <MDBNav
@@ -61,7 +61,7 @@ class Projects extends Component {
                 onClick={this.toggle("2")}
                 role="tab"
               >
-                <i className="fab fa-js fa-lg"></i> JavaScript Projects
+                <i className="fab fa-js fa-lg"></i> Completed Projects
               </MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
@@ -92,7 +92,7 @@ class Projects extends Component {
             </MDBTabPane>
             <MDBTabPane tabId="2" role="tabpanel">
               <h1 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
-                JavaScript Projects
+                Completed Projects
               </h1>
               <div className="projects-container">
                 {projectOptions.vanilla.map((item, index) => (
