@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e78f8fe26d273aa2dc46e7e6a18de62",
+    "revision": "02b4ad2a6a68aa6e96bda8a1bdcf295a",
     "url": "/myonlinecv/index.html"
   },
   {
-    "revision": "05aeaf866b177e46e236",
+    "revision": "fa4a14c2a174354bb918",
     "url": "/myonlinecv/static/css/2.b83d47f1.chunk.css"
   },
   {
-    "revision": "20f3d003b4460ebac981",
-    "url": "/myonlinecv/static/css/main.88622de3.chunk.css"
+    "revision": "abb4831af5eabe054bf6",
+    "url": "/myonlinecv/static/css/main.b7bcd5e0.chunk.css"
   },
   {
-    "revision": "05aeaf866b177e46e236",
-    "url": "/myonlinecv/static/js/2.67cec9fe.chunk.js"
+    "revision": "fa4a14c2a174354bb918",
+    "url": "/myonlinecv/static/js/2.63d939c9.chunk.js"
   },
   {
-    "revision": "20f3d003b4460ebac981",
-    "url": "/myonlinecv/static/js/main.6fe34976.chunk.js"
+    "revision": "abb4831af5eabe054bf6",
+    "url": "/myonlinecv/static/js/main.ec1ee7a5.chunk.js"
   },
   {
     "revision": "513dcba45055c6b54c22",
