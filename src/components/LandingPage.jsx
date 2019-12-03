@@ -24,7 +24,7 @@ export default function LandingPage() {
           dataText={[
             "Welcome to MyOnlineCV!",
             "Nice of you to drop by!",
-            "Click the button bellow to browse around!"
+            "Click the button bellow to check it out!"
           ]}
         />
         <a href="#myNavigation">

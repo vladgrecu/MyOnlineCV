@@ -51,7 +51,7 @@ const Contact = () => {
       </h2>
       <p className="text-center w-responsive mx-auto p-2 pb-5">
         Whether you want to get in touch, talk about a project collaboration, or
-        just say hi, I'd love to hear from you. Simply fill the from and send me
+        just say hi, I'd love to hear from you. Simply fill the form and send me
         an email.
       </p>
       <MDBCol className="mx-auto w-responsive">

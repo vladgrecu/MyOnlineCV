@@ -4,7 +4,7 @@
   color: #fff;
 }
 .cursor {
-  margin-left: 5px;
+  margin-left: 2px;
   border-left: 0.1em solid rgb(240, 240, 240);
   animation: blink 0.5s steps(1) infinite;
 }

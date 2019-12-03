@@ -7,18 +7,8 @@ import {
   MDBView,
   MDBContainer
 } from "mdbreact";
+import { carrouselItem } from "../../assets/helpers/carousel";
 
-import picture1 from "../../assets/photos/about/spartan1.jpg";
-import picture2 from "../../assets/photos/about/spartan2.jpg";
-import picture3 from "../../assets/photos/about/spartan3.jpg";
-import picture4 from "../../assets/photos/about/filmari1.jpg";
-
-const carrouselItem = [
-  { id: "1", src: picture1, text: "pic1 description" },
-  { id: "2", src: picture2, text: "pic2 description" },
-  { id: "3", src: picture3, text: "pic3 description" },
-  { id: "4", src: picture4, text: "pic4 description" }
-];
 const Gallery = () => {
   return (
     <MDBContainer className="card mb-5">
@@ -27,7 +17,7 @@ const Gallery = () => {
       </h1>
       <MDBCarousel
         activeItem={1}
-        length={4}
+        length={7}
         showControls={true}
         showIndicators={true}
         className="z-depth-1 w-50 mx-auto mb-4"

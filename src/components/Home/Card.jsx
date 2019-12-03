@@ -17,7 +17,7 @@ const CardExample = () => {
       <MDBCard style={{ width: "22rem" }}>
         <MDBCardImage className="img-fluid" src={Me} waves hover />
         <MDBCardBody>
-          <MDBCardTitle>"Fear has two meanings"</MDBCardTitle>
+          <MDBCardTitle>Fear has two meanings:</MDBCardTitle>
           <MDBCardText>
             <span>"Forget Everything and Run</span>
             <span> or </span>

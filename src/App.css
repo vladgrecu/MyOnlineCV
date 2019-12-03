@@ -44,3 +44,6 @@ html {
   top: 10%;
   z-index: 5 !important;
 }
+.carousel-control-prev-icon {
+  height: 50px;
+}
