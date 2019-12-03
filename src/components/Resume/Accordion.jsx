@@ -22,7 +22,7 @@ const Accordion = ({ options }) => {
   };
 
   return (
-    <div className="section-container">
+    <div className="section-container w-75 mx-auto">
       <button className={`section ${setActive}`} onClick={togglesection}>
         <h1 className="sectionTitle">
           <i className={titleIcon}></i>

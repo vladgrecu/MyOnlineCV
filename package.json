@@ -3,6 +3,10 @@
   "name": "myonlinecv",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.11.2",
+    "node": "10.16.0"
+  },
   "dependencies": {
     "mdbreact": "^4.22.1",
     "react": "^16.12.0",

@@ -80,7 +80,7 @@ export const projectOptions = {
       description:
         "A simulated list of products that you can add to your shopping basket.",
       gitHub: "https://github.com/vladgrecu/shoppingBasket",
-      live: "Add it to gitHub Pages"
+      live: "https://github.com/vladgrecu/shoppingBasket"
     },
     {
       title: "Smart Brain",
@@ -88,7 +88,7 @@ export const projectOptions = {
       description:
         "Authentication app that has the possibility to submit an image for face-detection.",
       gitHub: "https://github.com/vladgrecu/smartBrain",
-      live: "Add it to gitHub Pages"
+      live: "https://github.com/vladgrecu/shoppingBasket"
     },
     {
       title: "Sub.Me",
@@ -96,7 +96,7 @@ export const projectOptions = {
       description:
         "Submit a video/audio file, recorded in any language, and get subtitles in the language you want.",
       gitHub: "https://github.com/vladgrecu/Subme",
-      live: "Add it to gitHub Pages"
+      live: "https://github.com/vladgrecu/shoppingBasket"
     }
   ]
 };
