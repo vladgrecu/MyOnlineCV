@@ -1,7 +1,7 @@
 export const skills = [
   {
     type: "JavaScript",
-    level: 85,
+    level: 75,
     color: {
       bar: "#ffc107",
       title: {
@@ -12,7 +12,7 @@ export const skills = [
   },
   {
     type: "HTML5",
-    level: 80,
+    level: 70,
     color: {
       bar: "#e85d25",
       title: {
@@ -23,7 +23,7 @@ export const skills = [
   },
   {
     type: "CSS3",
-    level: 70,
+    level: 60,
     color: {
       bar: "#249ddb",
       title: {
@@ -34,7 +34,7 @@ export const skills = [
   },
   {
     type: "Bootstrap 4",
-    level: 80,
+    level: 70,
     color: {
       bar: "#8350ce",
       title: {
@@ -45,7 +45,7 @@ export const skills = [
   },
   {
     type: "React",
-    level: 70,
+    level: 60,
     color: {
       bar: "#5ed4f4",
       title: {
@@ -56,7 +56,7 @@ export const skills = [
   },
   {
     type: "Redux",
-    level: 40,
+    level: 30,
     color: {
       bar: "#7348b7",
       title: {
@@ -67,7 +67,7 @@ export const skills = [
   },
   {
     type: "NodeJS",
-    level: 50,
+    level: 40,
     color: {
       bar: "#87c000",
       title: {
@@ -78,7 +78,7 @@ export const skills = [
   },
   {
     type: `Git`,
-    level: 70,
+    level: 60,
     color: {
       bar: "#e94e32",
       title: {
