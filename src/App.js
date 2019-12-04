@@ -10,34 +10,30 @@ import Footer from "./components/Footer";
 import Particles from "react-particles-js";
 import BackToTop from "./components/BackToTop/BackToTop";
 import { helperFunctions } from "./assets/helpers/helpers";
+import { particlesOptions } from "./assets/helpers/particleOptions";
 import "./App.css";
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 150,
-      density: {
-        enable: true,
-        value_area: 1500
-      }
-    },
-    move: {
-      random: true,
-      bounce: false
-    }
-  }
-};
-
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = { showParticles: true };
+  }
   componentDidMount() {
     helperFunctions();
   }
+  toggleParticles = () => {
+    setTimeout(() => {
+      this.setState({ showParticles: !this.state.showParticles });
+    }, 200);
+  };
   render() {
     return (
       <div className="App">
         <Router>
-          <Particles className="particles" params={particlesOptions} />
-          <LandingPage />
+          {this.state.showParticles ? (
+            <Particles className="particles" params={particlesOptions} />
+          ) : null}
+          <LandingPage toggleParticles={this.toggleParticles} />
           <div style={{ position: "relative", zIndex: "1" }}>
             <Navbar />
             <Route path="/" component={Home} exact></Route>
@@ -45,7 +41,7 @@ class App extends React.Component {
             <Route path="/projects" component={Projects}></Route>
             <Route path="/contact" component={Contact}></Route>
           </div>
-          <BackToTop />
+          <BackToTop toggleParticles={this.toggleParticles} />
           <Footer />
         </Router>
       </div>

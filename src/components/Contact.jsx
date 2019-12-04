@@ -44,8 +44,8 @@ const Contact = () => {
     }
   };
   return (
-    <section className="my-5 card w-75 mx-auto">
-      <h1 className="text-center mt-5 mb-5 mx-auto border-bottom w-50 p-3">
+    <section className="card w-75 mx-auto mt-4 p-4">
+      <h1 className="text-center mb-5 mx-auto border-bottom w-50 p-3">
         Get in Touch
       </h1>
       <p className="text-center w-responsive mx-auto p-2 pb-5">

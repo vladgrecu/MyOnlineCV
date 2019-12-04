@@ -4,7 +4,7 @@ import TypeWriter from "../components/LandingPage/TypeWriter";
 
 import LazyHero from "react-lazy-hero";
 
-export default function LandingPage() {
+export default function LandingPage({ toggleParticles }) {
   return (
     <div
       className="text-center"
@@ -24,11 +24,16 @@ export default function LandingPage() {
           dataText={[
             "Welcome to MyOnlineCV!",
             "Nice of you to drop by!",
-            "Click the button bellow to check it out!"
+            "Click the button bellow to check it out!",
+            "P.S. Try to catch the snowflakes!"
           ]}
         />
         <a href="#myNavigation">
-          <MDBBtn color="info" style={{ zIndex: "1" }}>
+          <MDBBtn
+            color="info"
+            style={{ zIndex: "1" }}
+            onClick={toggleParticles}
+          >
             View My Website
           </MDBBtn>
         </a>

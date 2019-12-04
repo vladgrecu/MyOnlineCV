@@ -28,10 +28,10 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        <h1 className="text-center mt-5 mb-5 mx-auto border-bottom w-50 p-3">
-          My Portofolio
-        </h1>
-        <MDBContainer className="card mt-5" style={{ maxWidth: "1400px" }}>
+        <MDBContainer className="card mt-4 p-4" style={{ maxWidth: "1400px" }}>
+          <h1 className="text-center mb-5 mx-auto border-bottom w-50 p-3">
+            My Portofolio
+          </h1>
           <MDBNav
             className="nav-tabs nav-justified mt-5 p-1"
             style={{
@@ -81,9 +81,10 @@ class Projects extends Component {
             className="text-center mt-5"
           >
             <MDBTabPane tabId="1" role="tabpanel">
-              <h1 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
-                Learning Projects
-              </h1>
+              <h2 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
+                <i className="fas fa-graduation-cap fa-lg"></i> Learning
+                Projects
+              </h2>
               <div className="projects-container">
                 {projectOptions.learning.map((item, index) => (
                   <ProjectCard options={item} key={index} index={index} />
@@ -91,9 +92,9 @@ class Projects extends Component {
               </div>
             </MDBTabPane>
             <MDBTabPane tabId="2" role="tabpanel">
-              <h1 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
-                Completed Projects
-              </h1>
+              <h2 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
+                <i className="fab fa-js fa-lg"></i> Completed Projects
+              </h2>
               <div className="projects-container">
                 {projectOptions.vanilla.map((item, index) => (
                   <ProjectCard options={item} key={index} index={index} />
@@ -101,9 +102,9 @@ class Projects extends Component {
               </div>
             </MDBTabPane>
             <MDBTabPane tabId="3" role="tabpanel">
-              <h1 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
-                ReactJS Projects
-              </h1>
+              <h2 className="mt-2 mb-5 border-bottom w-50 mx-auto pb-2">
+                <i className="fab fa-react fa-lg"></i> ReactJS Projects
+              </h2>
               <div className="projects-container mx-auto">
                 {projectOptions.react.map((item, index) => (
                   <ProjectCard options={item} key={index} index={index} />
