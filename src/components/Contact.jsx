@@ -30,14 +30,14 @@ const Contact = () => {
         body: JSON.stringify(form)
       });
       await request.json();
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
       setServerResponse(
         "Your email is on it's way! I will get in touch as soon as possible."
       );
       setVisibility(true);
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
     } catch (error) {
       setServerResponse("Something went wrong! Please try again.");
       setVisibility(true);
