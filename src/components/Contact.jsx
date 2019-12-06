@@ -34,10 +34,12 @@ const Contact = () => {
         "Your email is on it's way! I will get in touch as soon as possible."
       );
       setVisibility(true);
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+      setTimeout(() => {
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      }, 500);
     } catch (error) {
       setServerResponse("Something went wrong! Please try again.");
       setVisibility(true);

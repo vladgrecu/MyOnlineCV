@@ -27,10 +27,10 @@ export default function ProjectCard({ options, index }) {
           <h4 className="card-title">{title}</h4>
           <p className="card-text">{description}</p>
           <MDBBtn color="dark" onClick={() => openNewWindow(gitHub)}>
-            <i className="fab fa-github fa-2x"></i>
+            <i className="fab fa-github fa-2x"></i> Github
           </MDBBtn>
           <MDBBtn color="success" onClick={() => openNewWindow(live)}>
-            <i className="far fa-play-circle fa-2x"></i>
+            <i className="far fa-play-circle fa-2x"></i> Live
           </MDBBtn>
         </div>
       </div>

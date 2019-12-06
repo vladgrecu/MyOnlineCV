@@ -8,13 +8,10 @@ const goToHomeSection = () => {
   });
 };
 
-export default function BackToTop({ toggleParticles }) {
+export default function BackToTop() {
   return (
     <div
-      onClick={() => {
-        goToHomeSection();
-        toggleParticles();
-      }}
+      onClick={goToHomeSection}
       className="d-none fixed-action-btn"
       id="backToTop"
       style={{

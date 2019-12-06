@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Particles from "react-particles-js";
 import BackToTop from "./components/BackToTop/BackToTop";
+import MakeItSnow from "./components/MakeItSnow/MakeItSnow";
 import { helperFunctions } from "./assets/helpers/helpers";
 import { particlesOptions } from "./assets/helpers/particleOptions";
 import "./App.css";
@@ -33,7 +34,7 @@ class App extends React.Component {
           {this.state.showParticles ? (
             <Particles className="particles" params={particlesOptions} />
           ) : null}
-          <LandingPage toggleParticles={this.toggleParticles} />
+          <LandingPage />
           <div style={{ position: "relative", zIndex: "1" }}>
             <Navbar />
             <Route path="/" component={Home} exact></Route>
@@ -41,7 +42,11 @@ class App extends React.Component {
             <Route path="/projects" component={Projects}></Route>
             <Route path="/contact" component={Contact}></Route>
           </div>
-          <BackToTop toggleParticles={this.toggleParticles} />
+          <MakeItSnow
+            toggleParticles={this.toggleParticles}
+            isSnowing={this.state.showParticles}
+          />
+          <BackToTop />
           <Footer />
         </Router>
       </div>

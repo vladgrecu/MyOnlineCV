@@ -90,14 +90,12 @@ export const skills = [
 ];
 
 export const SKILLS = [
-  {type: "HTML", level: 99},
-  {type: "CSS", level: 98},
-  {type: "JavaScript", level: 87},
-  {type: "jQuery", level: 92},
-  {type: "BootStrap", level: 90},
-  {type: "Photoshop", level: 100},
-  {type: "Angular.js", level: 16},
-  {type: "React.js", level: 25},
-  {type: "PHP", level: 36},
-  {type: "Ruby", level: 11}
+  { type: "HTML", level: 70, bgcolor: "#e85d25" },
+  { type: "CSS", level: 60, bgcolor: "#249ddb" },
+  { type: "JavaScript", level: 75, bgcolor: "#ffc107" },
+  { type: "BootStrap", level: 70, bgcolor: "#8350ce" },
+  { type: "ReactJS", level: 60, bgcolor: "#5ed4f4" },
+  { type: "Redux", level: 30, bgcolor: "#7348b7" },
+  { type: "NodeJS", level: 40, bgcolor: "#87c000" },
+  { type: "Git", level: 60, bgcolor: "#e94e32" }
 ];

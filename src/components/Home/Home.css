@@ -17,8 +17,8 @@
   z-index: 2;
 }
 .home-text {
-  width: 400px;
-  height: 330px;
+  max-width: 400px;
+  max-height: 330px;
   padding: 23px;
   font-size: 1rem;
   font-weight: 200;
@@ -27,9 +27,7 @@
   text-align: justify;
   margin: 5px;
   line-height: 25px;
-}
-.home-text:hover {
-  z-index: 3;
+  overflow: hidden;
 }
 .tada:hover {
   animation: tada 1s both infinite;

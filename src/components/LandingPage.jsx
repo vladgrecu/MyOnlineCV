@@ -4,7 +4,7 @@ import TypeWriter from "../components/LandingPage/TypeWriter";
 
 import LazyHero from "react-lazy-hero";
 
-export default function LandingPage({ toggleParticles }) {
+export default function LandingPage() {
   return (
     <div
       className="text-center"
@@ -29,11 +29,7 @@ export default function LandingPage({ toggleParticles }) {
           ]}
         />
         <a href="#myNavigation">
-          <MDBBtn
-            color="info"
-            style={{ zIndex: "1" }}
-            onClick={toggleParticles}
-          >
+          <MDBBtn color="info" style={{ zIndex: "1" }}>
             View My Website
           </MDBBtn>
         </a>
